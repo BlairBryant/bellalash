@@ -1,28 +1,235 @@
-.App {
-  text-align: center;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+.app {
+  width: 100%;
+  height: 100vh;
   color: white;
+  --green: #41C9A9;
+  --barkgreen: #31977F;
+  --blue: #34A7C1;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  overflow: hidden;
 }
 
-.App-title {
-  font-size: 1.5em;
+.row {
+  display: flex;
 }
 
-.App-intro {
-  font-size: large;
+.column {
+  display: flex;
+  flex-direction: column;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.leftNav {
+  width: 8vw;
+  min-width: 75px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--green), var(--blue));
+  box-sizing: border-box;
+  padding-top: 10vh;
+  align-items: center;
 }
+
+.leftNav hr {
+  width: 100%;
+  height: 1.5px;
+  background: white;
+  border: none;
+}
+
+.body {
+  width: 100%;
+  height: 100vh;
+}
+
+.leftNav img {
+  color: white;
+  width: 40%;
+  padding-top: 24px;
+  padding-bottom: 2px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.leftNav img:hover {
+  width: 45%;
+}
+
+img:nth-child(4) {
+  padding-bottom: 0px;
+}
+
+img:nth-child(6) {
+  padding-bottom: 4px;
+}
+
+.app span {
+  font-size: .6em;
+}
+
+.topNav {
+  width: 100%;
+  height: 6vh;
+}
+
+.topNavLeft {
+  width: 75%;
+  height: 100%;
+  background: linear-gradient(to right, #AFB9B7, #82918e);
+  align-items: center;
+  padding-left: 24px;
+  font-size: 2.2em;
+  font-weight: bold;
+}
+
+.topNavRight {
+  width: 25%;
+  min-width: 210px;
+  height: 100%;
+  background: var(--green);
+  align-items: center;
+  padding: 0px 24px 0px 32px;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.topNavRightUl {
+  justify-content: space-between;
+  width: 70%;
+}
+
+ul {
+  list-style-type: none;
+  font-size: .6em;
+  cursor: pointer;
+}
+
+.hamburgerMenu {
+  cursor: pointer;
+}
+
+.hamburgerMenu hr {
+  width: 16px;
+  height: 1px;
+  margin: 4px;
+  border: none;
+  background: white;
+  box-sizing: border-box;
+}
+
+.mainBody {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 24px;
+  background: #eee;
+}
+
+.mainCard {
+  width: 100%;
+  min-width: 500px;
+  height: 90%;
+  background: #fff;
+  box-shadow: 0px 4px 16px #999;
+  padding-top: 40px;
+  padding-left: 10%;
+  padding-right: 16px;
+  box-sizing: border-box;
+  align-items: flex-start;
+}
+
+.contentDiv1 {
+  position: relative;
+  width: 300px;
+}
+
+.contentDiv3 {
+  padding-top: 80px;
+}
+
+.slider {
+  width: 40px;
+  height: 18px;
+  background: var(--green);
+  border-radius: 16px;
+  position: absolute;
+  right: -56px;
+  top: 2px;
+}
+
+.sliderKnob {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #eee;
+  position: absolute;
+  right: -2px;
+  top: -2px;
+  cursor: pointer;
+  transition: .4s;
+}
+
+.sliderMove {
+  right: 22px;
+}
+
+.mainCard h3 {
+  color: var(--green);
+  font-size: 1.2em;
+}
+
+.mainCard p {
+  font-size: .9em;
+  color: #999;
+  padding-top: 40px
+}
+
+.mainCard p:nth-child(3) {
+  padding-bottom: 20px
+}
+
+.inputDivs {
+  color: #999;
+  font-size: 1.4em;
+  border-bottom: 1px solid #999;
+  box-sizing: border-box;
+  padding-bottom: 6px;
+  margin-top: 20px;
+}
+
+#inputDivsLast {
+  max-width: 380px;
+}
+
+.mainCard input {
+  border: none;
+  outline: none;  
+}
+
+#notificationsInput {
+  width: 24px;
+  margin-bottom: 80px;
+  border-bottom: 1px solid #999;
+}
+
