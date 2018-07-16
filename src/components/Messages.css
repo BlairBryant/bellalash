@@ -76,7 +76,7 @@
 }
 
 .messagesChatbox input {
-    width: 100%;
+    width: 98%;
     height: 24px;
     border-style: none;
     padding-left: 8px;
@@ -87,5 +87,5 @@
     height: 20px;
     position: absolute;
     top: 3px;
-    right: 6px;
+    right: 8px;
 }
